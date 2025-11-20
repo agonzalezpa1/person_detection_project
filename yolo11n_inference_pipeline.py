@@ -4,10 +4,10 @@ from ultralytics import YOLO
 model = YOLO("runs/detect/yolo11n_person_project/weights/best.pt")
 
 # Récupère le path de l'image, dossier ou vidéo de test
-source = "test.jpg"
+test_path = "test_image_1.jpg"
 
 # Affiche les résultats
-results = model.predict(conf=0.25, source=source, save=True)
+results = model.predict(conf=0.25, source=test_path, save=True)
 print(results)
 
 # Message de fin
