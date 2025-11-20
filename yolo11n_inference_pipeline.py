@@ -3,7 +3,7 @@ from ultralytics import YOLO
 # Sélectionne la meilleure version du modèle YOLO11n en fonction de son score F1
 model = YOLO("runs/detect/yolo11n_person_project/weights/best.pt")
 
-# Récupère le path de l'image, dossier ou vidéo de test
+# Récupère le path de l'image ou vidéo de test
 test_path = "test_image_1.jpg"
 
 # Affiche les résultats
