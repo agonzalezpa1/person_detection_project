@@ -8,11 +8,13 @@ model = YOLO("/runs/detect/yolo11n_person_project/weights/best.pt")
 # Si dans Google Collab : /content/person_detection_project/test_image_2.jpg
 test_path = "/test_image_2.jpg"
 
-# Affiche les résultats
+# Affiche les résultats du nombre de personnes détectées
 results = model.predict(conf = 0.05, source = test_path, save = True)
-#results = model.predict(source = test_path, classes = [0])
+r = results[0]
+classes = r.boxes.cls.tolist()
+num_persons = classes.count(4)
 
-print(results)
+print("Number of persons detected in the image :", num_persons)
 
 # Message de fin
 print("Inference done with the inference pipeline. Check the 'runs/predict' folder.")
