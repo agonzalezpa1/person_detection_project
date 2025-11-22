@@ -14,7 +14,4 @@ r = results[0]
 classes = r.boxes.cls.tolist()
 num_persons = classes.count(4)
 
-print("Number of persons detected in the image :", num_persons)
-
-# Message de fin
-print("Inference done with the inference pipeline. Check the 'runs/predict' folder.")
+print("\n\nNumber of persons detected in the image :", num_persons)

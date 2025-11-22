@@ -26,7 +26,4 @@ model.train(
 # Retour sur le score F1 après chaque epoch
 metrics = model.val()
 f1_person = metrics.box.f1[0]
-print(f"F1 (person) after {total_epochs} epochs : {f1_person:.4f}")
-
-# Message de fin
-print("Training completed using the training pipeline.")
+print(f"\n\nF1 (person) after {total_epochs} epochs : {f1_person:.4f}")
