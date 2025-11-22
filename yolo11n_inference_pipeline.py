@@ -7,7 +7,9 @@ model = YOLO("runs/detect/yolo11n_person_project/weights/best.pt")
 test_path = "test_image_1.jpg"
 
 # Affiche les résultats
-results = model.predict(conf=0.25, source=test_path, save=True)
+results = model.predict(conf = 0.25, source = test_path, save = True)
+#results = model.predict(source = test_path, classes = [0])
+
 print(results)
 
 # Message de fin
