@@ -6,8 +6,8 @@ from ultralytics import YOLO
 model = YOLO("/runs/detect/yolo11n_person_project/weights/best.pt")
 
 # Récupère le path de l'image de test
-# Si dans Google Collab : /content/person_detection_project/[nom_image].jpg
-test_path = "/test_image_2.jpg"
+# Si dans Google Collab : /content/person_detection_project/test_images/[nom_image].jpg
+test_path = "/test_images/test_image_2.jpg"
 file_name = os.path.splitext(os.path.basename(test_path))[0]
 
 # Affiche les résultats du nombre de personnes détectées
