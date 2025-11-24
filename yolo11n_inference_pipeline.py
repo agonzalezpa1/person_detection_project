@@ -5,8 +5,8 @@ from ultralytics import YOLO
 # Si dans Google Collab : /content/runs/detect/yolo11n_person_project/weights/best.pt
 model = YOLO("/runs/detect/yolo11n_person_project/weights/best.pt")
 
-# Récupère le path de l'image ou vidéo de test
-# Si dans Google Collab : /content/person_detection_project/test_image_2.jpg
+# Récupère le path de l'image de test
+# Si dans Google Collab : /content/person_detection_project/[nom_image].jpg
 test_path = "/test_image_2.jpg"
 file_name = os.path.splitext(os.path.basename(test_path))[0]
 

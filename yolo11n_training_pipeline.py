@@ -9,7 +9,7 @@ path_data_yaml = os.path.join(dataset_path, "data.yaml")
 
 # Sélectionne le modèle YOLO11n
 model = YOLO("yolo11n.pt")
-model.to("cuda") # pour forcer à utiliser le GPU
+model.to("cuda") # pour forcer à utiliser le GPU T4 sur Google Collab
 
 # Entraîne le modèle avec le dataset sur Kaggle
 total_epochs = 50
@@ -23,7 +23,7 @@ model.train(
     device = 0, # Utilisant le GPU
 )
 
-# Retour sur le score F1 après chaque epoch
+# Retour sur le score F1 après l'entraînement
 metrics = model.val()
 f1_person = metrics.box.f1[0]
 print(f"\n\nF1 (person) after {total_epochs} epochs : {f1_person:.4f}")
