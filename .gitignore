@@ -1,6 +1,6 @@
 # Environnement virtuel
 .venv/
 
-# Dossiers d'output YOLO
+# Dossiers d'output YOLO11n
 exp10-new/
 runs/
